@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]><html lang="en" class="js-off lte-ie8"><![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="js-off ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="js-off">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/wmui-style-guide.min.css">
+    <title>WikimediaUI Style Guide provided by Wikimedia Foundation design team</title>
+    <script>
+		document.documentElement.className = document.documentElement.className.replace(/\bjs-off\b/,'js-on'); // no BEM notation thx to IE
+    </script>
+    <!--[if lt IE 9]>
+    <script>window.html5={'shivCSS':false};</script>
+    <script src="js/vendor/ie/html5shiv-3.7.3.min.js"></script>
+    <script src="js/vendor/ie/respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header id="header" class="header" role="banner">
+    <div class="box">
+        <a href="#content" class="is-aural is-focusable">Jump to content</a>
+        <a href="#nav" class="is-aural is-focusable">Jump to navigation</a>
+        <h1 class="site__title">Wikimedia User Interface Style Guide</h1>
+    </div>
+</header>
+<div class="content-box">
+    <nav id="nav" class="nav toc" role="nav">
+        <ol>
+            <li class="is-on"><a href="index.html">Introduction</a>
+                <ul class="toc__sub-sections">
+                    <li><a href="#how-to-contribute">How to contribute</a></li>
+                </ul>
+            </li>
+            <li><a href="design-principles.html">Design principles</a>
+                <ul class="toc__sub-sections">
+                    <li><a href="#this-is-for-everyone">This is for everyone</a></li>
+                    <li><a href="#content-first">Content first</a></li>
+                    <li><a href="#open-to-collaboration">Open to collaboration</a></li>
+                    <li><a href="#trustworthy-yet-joyful">Trustworthy yet joyful</a></li>
+                    <li><a href="#design-for-consistency">Design for consistency</a></li>
+                </ul>
+            </li>
+            <li><a href="visual-style.html">Visual style</a>
+                <ul class="toc__sub-sections">
+                    <li><a href="#core-visual-identity">Core visual identity</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                </ul>
+            </li>
+        </ol>
+    </nav>
+		<main id="content" class="content" role="main">
+			<h1>Visual Style</h1>
+			<p>Wikimedia projects are associated with learning, editorship, and books. They are neutral and transparent. They are about reading and writing. They remind you of ink and paper.</p>
+
+
+			<section id="core-visual-identity">
+				<h2>Core Visual Identity</h2>
+				<p>Our core visual identity presents our main content on a single main page or layer.<br>We emphasise content by using only this single layer, which sits on top of a base gray surface that contains the chrome (structural elements of content which also host controls).</p>
+			</section>
+
+			<section id="colors">
+				<h2>Colors</h2>
+				<p>For <a href="https://phabricator.wikimedia.org/M82">the color palette</a> we chose colors that depict our character and also bring a hint of freshness to our products.</p>
+				<p>Making the content readable for everyone was our main goal for defining our palette. Accessibility considerations have been our top priority when choosing each color (<a href="https://www.w3.org/WAI/intro/wcag">WCAG</a> conformance level is indicated for each color based on their contrast against white and black).</p>
+
+				<h3>Base colors</h3>
+				<p>Base colors define the surface where content lives and the main color for content. Different shades of paper and ink are useful to emphasise or de-emphasise different content areas.</p>
+				<p>Base colors go from pure white (Base100) to pure black (Base0). Intermediate shades of grey include a tint of blue for a better harmony with our accent color.</p>
+				<p>When applying text on a surface, you need to <a href="http://leaverou.github.io/contrast-ratio/">check the color contrast</a> between the text and the background. Base50…0 are safe text colors for a white surface. Base100…50 are safe text colors for a black surface.</p>
+				<img src="img/colors-base.png" alt="Base colors">
+
+				<h3>Accent colors</h3>
+				<p>Accent colors are used to emphasise actions and highlight key information. Blue is a natural choice in our context, where it has been the default color used for links, conveying the idea of action.</p>
+				<p>There are three shades provided for situations where you need a lighter (Accent90), regular (Accent50) or darker (Accent10) version.</p>
+				<p>Accent50 provides a blue which is suitable to be used for text and as background. When used for text (as in links) it provides enough contrast with black text to notice the difference. When used as background, it provides enough contrast with white text to keep the text readable.</p>
+				<img src="img/colors-accent.png" alt="Accent colors">
+
+				<h3>Supplementary colors</h3>
+				<p>Red, green, and yellow are supplementary colors. They can act as accent colors bringing the additional meaning that is commonly associated with them.</p>
+				<img src="img/colors-supplementary.png" alt="Supplementary colors">
+
+				<h3>Additional colors</h3>
+				<p>For some uses such as charts and data visualisation, a broader color palette may be needed. When extending the default palette with new colors, make sure to check their contrast with other colors according to their use, and how they are perceived for different color-blind conditions.</p>
+			</section>
+
+			<section id="typography">
+				<h2>Typography</h2>
+
+				<p>Because so much of Wikipedia and wiki projects rely on writing and reading, typography is a key component of Wikimedia design. You need to consider the typeface, size, style and spacing of your text to make it achieve a good <a href="https://en.wikipedia.org/wiki/Readability">readability</a>.</p>
+
+				<p><em>This section is currently under development. See dev branch of this repo for up-to-date discussion results.</em></p>
+			</section>
+
+			<section id="icons">
+				<h2>Icons</h2>
+				Icons help convey a message visually.
+
+				<h3>Icon style</h3>
+
+				<img src="img/icons-sample.png" alt="Sample of icons">
+
+				<p>Icons should be simple. They use monochromatic vector-based shapes with the following properties:</p>
+
+				<ul>
+					<li><b>Filled areas.</b> Shapes are defined by filled areas as opposed to outlines.</li>
+					<li><b>Rounded corners.</b> Corners are slightly rounded to make shapes more friendly and welcoming, but not too much to look goofy.</li>
+					<li><b>Medium thick strokes.</b> Strokes should be visible at smaller sizes without effort.</li>
+					<li><b>Diagonal cross-out lines.</b> Icons with a cross-out line will have it from the top-left to the bottom right (like “\”).</li>
+				</ul>
+
+				<h3>Using icons</h3>
+				<p>The <a href="https://doc.wikimedia.org/oojs-ui/master/demos/#icons-mediawiki-ltr">icon repository</a> provides a list of the currently available icons.</p>
+
+				<p>When using icons you need to consider the size of their target area. Even if icons are presented at a smaller size, you need to make sure that the associated active area is at least 48x48sp. Otherwise users may fail to hit the active area, not getting the expected result.</p>
+
+				<h3>Creating icons</h3>
+				<p>Icons follow a template. The default canvas is 24x24px. In order to allow for optical adjustments, a different margin will be applied depending on the shape of the icon.</p>
+
+				<figure>
+					<img src="img/icons-optical-adjustment.png" alt="Optical adjustment for icons">
+					<figcaption>Different shapes have a different perceived size. A 1px margin for square shapes is used so that other shapes such as circles can expand to reach a similar perceived size.</figcaption>
+				</figure>
+
+				<p>Icons are created using black (<a href="#colors">Base0</a>). Their color can be changed when the icon is used (preferably done automatically by software).</p>
+				<p>The simple style and guidelines make it easy to reuse or adapt existign freely licensed icons that you can find on other repos such as <a href="https://material.io/icons/">material icons</a> or the <a href="https://thenounproject.com/">noun project</a>. You are welcome to use existing icons that align to the proposed style instead of reinventing the wheel icon.</p>
+
+			</section>
+		</main>
+    </div>
+    <footer id="footer" class="footer box">
+        Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International</a>, additional terms may apply. <br>Code is available under the MIT license.
+    </footer>
+</body>
+</html>

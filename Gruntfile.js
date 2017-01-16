@@ -3,12 +3,26 @@
  */
 
 module.exports = function ( grunt ) {
+	grunt.loadNpmTasks( 'grunt-compile-handlebars' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
+		'compile-handlebars': {
+			siteGen: {
+				partials: 'contents/partials/*.html',
+				files: [{
+					expand: true,
+					cwd: 'contents/',
+					src: '*.html',
+					dest: 'docs/',
+					ext: '.html'
+				}]
+			}
+		},
+
 		// Lint – Styles
 		stylelint: {
 			src: [
@@ -56,7 +70,7 @@ module.exports = function ( grunt ) {
 			},
 			target: {
 				files: {
-				  'css/wmui-style-guide.min.css': 'css/wmui-style-guide.css'
+				  'docs/css/wmui-style-guide.min.css': 'css/wmui-style-guide.css'
 				}
 			}
 		},
@@ -72,6 +86,7 @@ module.exports = function ( grunt ) {
 
 	} );
 
+	grunt.registerTask( 'gen', [ 'compile-handlebars', 'cssmin' ] );
 	grunt.registerTask( 'lint', [ 'stylelint' ] );
 	grunt.registerTask( 'default', 'lint', 'postcss', 'cssmin' );
 };
